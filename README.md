@@ -9,7 +9,7 @@ follow-up commits, and merge commits with two GitHub accounts.
 python calculator.py 8 2 add
 ```
 
-Supported operations: `add`, `subtract`, `multiply`.
+Supported operations: `add`, `subtract`, `multiply`, `divide`.
 
 ## Roles
 
@@ -17,3 +17,5 @@ Supported operations: `add`, `subtract`, `multiply`.
 - Contributor: `jlmyc`
 
 One person operates both accounts for this exercise.
+
+Division example: `python calculator.py 8 2 divide`.

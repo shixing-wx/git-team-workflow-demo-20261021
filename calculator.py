@@ -9,6 +9,8 @@ def calculate(left, right, operation):
         return left - right
     if operation == "multiply":
         return left * right
+    if operation == "divide":
+        return left / right
     raise ValueError("Unsupported operation")
 
 
@@ -16,7 +18,7 @@ def main():
     parser = argparse.ArgumentParser(description="A small calculator")
     parser.add_argument("left", type=float)
     parser.add_argument("right", type=float)
-    parser.add_argument("operation", choices=["add", "subtract", "multiply"])
+    parser.add_argument("operation", choices=["add", "subtract", "multiply", "divide"])
     args = parser.parse_args()
     print(calculate(args.left, args.right, args.operation))
 
