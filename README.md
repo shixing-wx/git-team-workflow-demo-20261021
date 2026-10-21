@@ -19,3 +19,14 @@ Supported operations: `add`, `subtract`, `multiply`, `divide`.
 One person operates both accounts for this exercise.
 
 Division example: `python calculator.py 8 2 divide`.
+
+## Error handling
+
+A zero divisor (including -0.0) reports `Cannot divide by zero` and exits with
+status 2, without a traceback.
+
+## Tests
+
+```sh
+python -m unittest -v
+```

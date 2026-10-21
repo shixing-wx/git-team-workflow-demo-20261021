@@ -10,6 +10,8 @@ def calculate(left, right, operation):
     if operation == "multiply":
         return left * right
     if operation == "divide":
+        if right == 0:
+            raise ValueError("Cannot divide by zero")
         return left / right
     raise ValueError("Unsupported operation")
 
@@ -20,7 +22,11 @@ def main():
     parser.add_argument("right", type=float)
     parser.add_argument("operation", choices=["add", "subtract", "multiply", "divide"])
     args = parser.parse_args()
-    print(calculate(args.left, args.right, args.operation))
+    try:
+        result = calculate(args.left, args.right, args.operation)
+    except ValueError as error:
+        parser.error(str(error))
+    print(result)
 
 
 if __name__ == "__main__":
